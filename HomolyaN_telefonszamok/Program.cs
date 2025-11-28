@@ -67,9 +67,35 @@ namespace HomolyaN_telefonszamok
                     }
                 }
                 else if (kezelo == "4") {
-                    
+                    foreach (var nev in lista)
+                    {
+                        bool jo = true;
+                        foreach (char betu in nev)
+                        {
+                            if (char.IsLetter(betu) && betu != ' ')
+                            {
+                                jo = false;
+                            }
+                            if (jo)
+                            {
+                                Console.WriteLine(nev);
+                            }
+                        }
+
+                    }
                 }
-                else if (kezelo == "5") { }
+                
+
+            
+                else if (kezelo == "5") {
+                    foreach (var tel in lista)
+                    {
+                        if (tel.Contains(' '))
+                        {
+                            Console.WriteLine(tel);
+                        }
+                    }
+                }
                 else if (kezelo == "6") { }
                 else if (kezelo == "7") { }
                 else if (kezelo == "0")
